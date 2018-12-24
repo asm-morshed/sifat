@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Section-1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="formBox">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Contact Us</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="inputBox">
+                                        <div class="inputText">
+                                            First Name
+                                        </div>
+                                        <input type="text" name="" class="input" required="required" oninvalid="this.setCustomValidity('You must enter your name')" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="inputBox">
+                                        <div class="inputText">
+                                            Last Name
+                                        </div>
+                                        <input type="text" name="" class="input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="inputBox">
+                                        <div class="inputText">
+                                            Email
+                                        </div>
+                                        <input type="text" name="" class="input">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="inputBox">
+                                        <div class="inputText">
+                                            Mobile
+                                        </div>
+                                        <input type="text" name="" class="input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="inputBox">
+                                        <div class="inputText">Message</div>
+                                        <textarea name="" class="input" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+
+                                    <input type="submit" value="Send Me" class="button">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(".input").focus(function () {
+            $(this).parent().addClass("focus");
+        }).blur(function () {
+            if ($(this).val() === '') {
+                $(this).parent().removeClass("focus");
+            }
+        })
+    </script>
+</body>
+
+</html>

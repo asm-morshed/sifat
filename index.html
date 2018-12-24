@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center text-success">Completer Form Validation In Javascript</h1>
+        <div class="col-lg-8 m-auto d-block">
+            <form action="#" onsubmit="return validation()" class="bg-light">
+
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" name="First Name" class="form-control" id="fname" autocomplete="off">
+                    <span id="fnamewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" name="Last Name" class="form-control" id="lname" autocomplete="off">
+                    <span id="lnamewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Home Address</label>
+                    <input type="text" name="home address" class="form-control" id="h_address" autocomplete="off">
+                    <span id="h_addresswr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Home City</label>
+                    <input type="text" name="home city" class="form-control" id="h_city" autocomplete="off">
+                    <span id="h_citywr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Home Address: State</label>
+                    <input type="text" name="homeaddress" class="form-control" id="h_state" autocomplete="off">
+                    <span id="h_statewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Home Zip Code</label>
+                    <input type="text" name="homezipcode" class="form-control" id="h_zip" autocomplete="off">
+                    <span id="h_zipwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" name="email" class="form-control" id="email" autocomplete="off">
+                    <span id="emailwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Work Area Code</label>
+                    <input type="text" name="workareacode" class="form-control" id="w_area" autocomplete="off">
+                    <span id="w_areawr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Work Prefix</label>
+                    <input type="text" name="workprefix" class="form-control" id="w_prefix" autocomplete="off">
+                    <span id="w_prefixwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Work Sufix</label>
+                    <input type="text" name="worksuffix" class="form-control" id="w_sufix" autocomplete="off">
+                    <span id="w_sufixwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Area Code</label>
+                    <input type="text" name="area code" class="form-control" id="h_area" autocomplete="off">
+                    <span id="h_areawr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Prefix Telephone 3 digit</label>
+                    <input type="text" name="h_prefix" class="form-control" id="h_prefix" autocomplete="off">
+                    <span id="h_prefixwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Suffix Telephone 4 digit</label>
+                    <input type="text" name="h_suffix" class="form-control" id="h_suffix" autocomplete="off">
+                    <span id="h_suffixwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Cell phone area code</label>
+                    <input type="text" name="cellphone" class="form-control" id="c_area" autocomplete="off">
+                    <span id="c_areawr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Cell prefix</label>
+                    <input type="text" name="cellprefix" class="form-control" id="c_prefix" autocomplete="off">
+                    <span id="c_prefixwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Cell suffix</label>
+                    <input type="text" name="cellsuffix" class="form-control" id="c_suffix" autocomplete="off">
+                    <span id="c_suffixwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Best Time To Call</label>
+                    <input type="text" name="besttimetocall" class="form-control" id="contact_time" autocomplete="off">
+                    <span id="contact_timewr" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="">IP address</label>
+                    <input type="text" name="ipaddress" class="form-control" id="ip_address" autocomplete="off">
+                    <span id="ip_addresswr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Country (2 letter)</label>
+                    <input type="text" name="country" class="form-control" id="country" autocomplete="off">
+                    <span id="countrywr" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Opt in</label>
+                    <input type="text" name="opt_in" class="form-control" id="opt_in" autocomplete="off">
+                    <span id="opt_inwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Home Owner</label>
+                    <input type="text" name="homeowner" class="form-control" id="homeowner" autocomplete="off">
+                    <span id="homeownerwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Form Submission ID</label>
+                    <input type="text" name="formsubmissionid" class="form-control" id="form_submission_id"
+                        autocomplete="off">
+                    <span id="form_submission_idwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">How did you hear about us</label>
+                    <input type="text" name="hearaboutus" class="form-control" id="source" autocomplete="off">
+                    <span id="sourcewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Time Until Install</label>
+                    <input type="text" name="timetoinstall" class="form-control" id="time_to_install" autocomplete="off">
+                    <span id="time_to_installwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Installation Type</label>
+                    <input type="text" name="installationtype" class="form-control" id="installation_type" autocomplete="off">
+                    <span id="installation_typewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Trusted Form URL</label>
+                    <input type="text" name="trustedformurl" class="form-control" id="trusted_form_url" autocomplete="off">
+                    <span id="trusted_form_urlwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Landig Page URL</label>
+                    <input type="text" name="landingpageurl" class="form-control" id="landing_page_url" autocomplete="off">
+                    <span id="landing_page_urlwr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Reference Code</label>
+                    <input type="text" name="ref_code" class="form-control" id="ref_code" autocomplete="off">
+                    <span id="ref_codewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Credit score of contact</label>
+                    <input type="text" name="creditscore" class="form-control" id="credit_score" autocomplete="off">
+                    <span id="credit_scorewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Residence Type</label>
+                    <input type="text" name="residencetype" class="form-control" id="residence_type" autocomplete="off">
+                    <span id="residence_typewr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Comments</label>
+                    <input type="text" name="comments" class="form-control" id="comments" autocomplete="off">
+                    <span id="commentswr" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Company</label>
+                    <input type="text" name="Company" class="form-control" id="company" autocomplete="off">
+                    <span id="company" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Lead ID-Jornaya Token Value</label>
+                    <input type="text" name="Leadidjornayatokenvalue" class="form-control" id="universal_leadid"
+                        autocomplete="off">
+                    <span id="universal_leadidwr" class="text-danger font-weight-bold"></span>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="text" name="pass" class="form-control" id="pass" autocomplete="off">
+                    <span id="password" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Confirm Password</label>
+                    <input type="text" name="conpass" class="form-control" id="conpass" autocomplete="off">
+                    <span id="conpassword" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Mobile</label>
+                    <input type="text" name="mobile" class="form-control" id="mobile" autocomplete="off">
+                    <span id="mobileValid" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" name="email" class="form-control" id="email" autocomplete="off">
+                    <span id="emailValid" class="text-danger font-weight-bold"></span>
+                </div> -->
+                <input type="submit" name="submit" value="submit" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        function validation() {
+            console.log("Working");
+
+            //var user = document.getElementById('user').value;
+            var homeaddress = document.getElementById('h_address').value;
+            var homecity = document.getElementById('h_city').value;
+            var homestate = document.getElementById('h_state').value;
+            var email = document.getElementById('email').value;
+            var workarea = document.getElementById('w_area').value;
+            var workprefix = document.getElementById('w_prefix').value;
+            var worksuffix = document.getElementById('w_sufix').value;
+            var areacode = document.getElementById('h_area').value;
+            var prefixtelephone = document.getElementById('h_prefix').value;
+            var suffixtelephone = document.getElementById('h_suffix').value;
+            var cellphonearea = document.getElementById('c_area').value;
+            var cellprefix = document.getElementById('c_prefix').value;
+            var cellsuffix = document.getElementById('c_suffix').value;
+            var timetocall = document.getElementById('contact_time').value;
+            var ipaddress = document.getElementById('ip_address').value;
+            var country = document.getElementById('country').value;
+            var optin = document.getElementById('opt_in').value;
+            var homeowner = document.getElementById('homeowner').value;
+            var formsubmissionid = document.getElementById('form_submission_id').value;
+            var source = document.getElementById('source').value;
+            var timetoinstall = document.getElementById('time_to_install').value;
+            var installationtype = document.getElementById('installation_type').value;
+            var trustedformurl = document.getElementById('trusted_form_url').value;
+            var landingpageurl = document.getElementById('landing_page_url').value;
+            var refcode = document.getElementById('ref_code').value;
+            var creditscore = document.getElementById('credit_score').value;
+            var residencetype = document.getElementById('residence_type').value;
+            var comments = document.getElementById('comments').value;
+            var company = document.getElementById('company').value;
+            var universalleadid = document.getElementById('universal_leadid').value;
+
+
+
+
+
+
+
+
+
+
+
+            //var pass = document.getElementById('pass').value;
+            //var conpass = document.getElementById('conpass').value;
+            //var mobile = document.getElementById('mobile').value;
+            //var email = document.getElementById('email').value;
+            //var email = document.getElementById('email').value;
+
+            if ((homeaddress.length >= 40)) {
+                document.getElementById('h_addresswr').innerHTML = "Home address must be in 40 characters"
+                // return false
+            }
+            if ((homecity.length >= 39)) {
+                document.getElementById('h_citywr').innerHTML = "City address must be in 39 characters"
+                //return false
+            }
+            if ((homecity.length !== 2)) {
+                document.getElementById('h_statewr').innerHTML = "Length must be in 2 characters"
+                //return false
+            }
+            if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+                document.getElementById('emailwr').innerHTML = ". invalid position"
+                return false
+            }
+
+            // if (user === '') {
+            //     document.getElementById('username').innerHTML = "Please Enter Your Name"
+            //     return false
+            // }
+            // if ((user.length < 2) || (user.length > 20)) {
+            //     document.getElementById('username').innerHTML = "User length must be between 2 and 20"
+            //     return false
+            // }
+            // if (!isNaN(user)) {
+            //     document.getElementById('username').innerHTML = "Only characters are allowed"
+            //     return false
+            // }
+
+            if ((workarea < 100) || (workarea > 999)) {
+
+                document.getElementById('w_areawr').innerHTML = "Range between 100 & 999"
+
+            }
+            if (workprefix > 999) {
+                document.getElementById('w_prefixwr').innerHTML = "Range between 999"
+
+            }
+            if ((worksuffix < 0) || (worksuffix > 9999)) {
+                document.getElementById('w_suffixwr').innerHTML = "Range between 0 and 9999"
+
+            }
+            if ((areacode < 100) || (areacode > 999)) {
+                document.getElementById('h_areawr').innerHTML = "Range between 100 and 999"
+
+            }
+            if ((prefixtelephone < 0) || (prefixtelephone > 999)) {
+                document.getElementById('h_prefixwr').innerHTML = "Range between 0 and 999"
+
+            }
+            if ((suffixtelephone < 0) || (suffixtelephone > 9999)) {
+                document.getElementById('h_suffixwr').innerHTML = "Range between 0 and 9999"
+
+            }
+            if ((cellphonearea < 100) || (cellphonearea > 999)) {
+                document.getElementById('c_areawr').innerHTML = "Range between 100 and 999"
+
+            }
+            if ((cellphonearea < 100) || (cellphonearea > 999)) {
+                document.getElementById('c_areawr').innerHTML = "Range between 100 and 999"
+
+            }
+            if ((cellprefix < 0) || (cellprefix > 999)) {
+                document.getElementById('c_prefixwr').innerHTML = "Range between 0 and 999"
+
+            }
+            if ((cellsuffix < 0) || (cellsuffix > 9999)) {
+                document.getElementById('c_suffixwr').innerHTML = "Range between 0 and 9999"
+
+            }
+            if (country.length > 2) {
+                document.getElementById('countrywr').innerHTML = "Only two letter"
+
+            }
+            if (homeowner.length > 40) {
+                document.getElementById('homeownerwr').innerHTML = "length should be in 40 characters"
+
+            }
+            if (universalleadid.length > 60) {
+                document.getElementById('universal_leadid').innerHTML = "length should be in 60 characters"
+
+            }
+            if (pass === '') {
+                document.getElementById('password').innerHTML = "Please Enter password"
+                return false
+            }
+            if ((pass.length <= 2) || (pass.length > 20)) {
+                document.getElementById('password').innerHTML = "password length must be between 3 and 20"
+                return false
+            }
+            if (conpass === '') {
+                document.getElementById('conpassword').innerHTML = "Please Enter conpass"
+                return false
+            }
+            if (pass !== conpass) {
+                document.getElementById('conpassword').innerHTML = "password didn't match"
+                return false
+            }
+            if (mobile === '') {
+                document.getElementById('mobileValid').innerHTML = "Please Enter mobile"
+                return false
+            }
+            if (!isNaN('mobile')) {
+                document.getElementById('mobileValid').innerHTML = "Please enter only digits"
+                return false
+            }
+            if (email === '') {
+                document.getElementById('emailValid').innerHTML = "Please Enter email"
+                return false
+            }
+            if (email.indexOf('@') <= 0) {
+                document.getElementById('emailValid').innerHTML = "@ Invalid position"
+                return false
+            }
+            if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+                document.getElementById('emailValid').innerHTML = ". invalid position"
+                return false
+            }
+        }
+
+    </script>
+</body>
+
+</html>
